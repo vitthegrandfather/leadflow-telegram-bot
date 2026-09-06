@@ -1,0 +1,156 @@
+import type { Lead } from "./types";
+
+function iso(daysAgo: number, hour = 10): string {
+  const date = new Date(Date.UTC(2026, 7, 28, hour, 12, 0));
+  date.setUTCDate(date.getUTCDate() - daysAgo);
+  return date.toISOString();
+}
+
+export const DEMO_VIEWER_USER_ID = 700000001;
+
+export const SEED_LEADS: Lead[] = [
+  {
+    id: 1,
+    publicId: "LF-260828-A1C3",
+    telegramUserId: 900000001,
+    username: "maya.studio",
+    fullName: "Maya Chen",
+    phone: "+14155550114",
+    serviceCategory: "website_development",
+    description:
+      "Need a marketing site for a ceramics studio with a simple enquiry form and a gallery of recent work.",
+    preferredContactMethod: "email",
+    status: "new",
+    adminNote: null,
+    createdAt: iso(7, 9),
+    updatedAt: iso(7, 9),
+  },
+  {
+    id: 2,
+    publicId: "LF-260829-B4D2",
+    telegramUserId: 900000002,
+    username: "omar.h",
+    fullName: "Omar Haddad",
+    phone: "+971501234567",
+    serviceCategory: "telegram_bot",
+    description:
+      "Booking bot for a two-chair barbershop. Customers pick a slot, staff confirm, and we send a reminder.",
+    preferredContactMethod: "telegram",
+    status: "in_progress",
+    adminNote: "Waiting on opening hours and public holidays list.",
+    createdAt: iso(6, 11),
+    updatedAt: iso(2, 16),
+  },
+  {
+    id: 3,
+    publicId: "LF-260830-C8E1",
+    telegramUserId: 900000003,
+    username: "e.volkova",
+    fullName: "Elena Volkova",
+    phone: "+491701112233",
+    serviceCategory: "api_integration",
+    description:
+      "Connect Stripe invoices to our internal Notion tracker so finance stops copying numbers by hand.",
+    preferredContactMethod: "email",
+    status: "completed",
+    adminNote: "Shipped webhook + Notion database mapping on 1 Sep.",
+    createdAt: iso(5, 8),
+    updatedAt: iso(1, 14),
+  },
+  {
+    id: 4,
+    publicId: "LF-260830-D0F9",
+    telegramUserId: 900000004,
+    username: "jonasberg",
+    fullName: "Jonas Berg",
+    phone: "+46701234567",
+    serviceCategory: "business_automation",
+    description:
+      "Weekly CSV of new signups emailed to operations, with a Slack ping when volume spikes.",
+    preferredContactMethod: "phone",
+    status: "cancelled",
+    adminNote: "Client postponed until Q4. Keep the brief on file.",
+    createdAt: iso(5, 15),
+    updatedAt: iso(3, 10),
+  },
+  {
+    id: 5,
+    publicId: "LF-260831-E2A7",
+    telegramUserId: 900000005,
+    username: "priya.nair",
+    fullName: "Priya Nair",
+    phone: "+919820011223",
+    serviceCategory: "website_development",
+    description:
+      "Rebuild the clinic landing page. Need appointment CTA, doctor bios, and multilingual EN/HI copy slots.",
+    preferredContactMethod: "whatsapp",
+    status: "in_progress",
+    adminNote: "Design draft sent. Awaiting logo files.",
+    createdAt: iso(4, 7),
+    updatedAt: iso(0, 12),
+  },
+  {
+    id: 6,
+    publicId: "LF-260901-F6B0",
+    telegramUserId: 900000006,
+    username: "luca.moretti",
+    fullName: "Luca Moretti",
+    phone: "+393471112244",
+    serviceCategory: "other",
+    description:
+      "Not sure which service we need. We run a small winery and want tasting-room reservations without a full website rebuild.",
+    preferredContactMethod: "phone",
+    status: "new",
+    adminNote: null,
+    createdAt: iso(3, 18),
+    updatedAt: iso(3, 18),
+  },
+  {
+    id: 7,
+    publicId: "LF-260902-A9C4",
+    telegramUserId: 900000007,
+    username: "hannah.cole",
+    fullName: "Hannah Cole",
+    phone: "+447700900123",
+    serviceCategory: "telegram_bot",
+    description:
+      "Support bot that answers FAQs for an online course and hands off to a human after two failed replies.",
+    preferredContactMethod: "telegram",
+    status: "completed",
+    adminNote: "FAQ set v2 approved. Bot handed over.",
+    createdAt: iso(2, 9),
+    updatedAt: iso(0, 11),
+  },
+  {
+    id: 8,
+    publicId: "LF-260903-B1D8",
+    telegramUserId: 900000008,
+    username: "wei.zhang",
+    fullName: "Wei Zhang",
+    phone: "+8613800138000",
+    serviceCategory: "api_integration",
+    description:
+      "Sync inventory from our warehouse API into Shopify, including low-stock alerts to the ops chat.",
+    preferredContactMethod: "email",
+    status: "new",
+    adminNote: null,
+    createdAt: iso(1, 13),
+    updatedAt: iso(1, 13),
+  },
+  {
+    id: 9,
+    publicId: "LF-260904-C3E5",
+    telegramUserId: 900000009,
+    username: "sofia.alvarez",
+    fullName: "Sofia Alvarez",
+    phone: "+34600111222",
+    serviceCategory: "business_automation",
+    description:
+      "Onboarding checklist for new contractors: collect documents, send a welcome pack, notify legal.",
+    preferredContactMethod: "whatsapp",
+    status: "in_progress",
+    adminNote: "Need document list from legal before workflow mapping.",
+    createdAt: iso(0, 8),
+    updatedAt: iso(0, 8),
+  },
+];

@@ -24,3 +24,7 @@ node_modules/
 .nitro/
 dist-ssr/
 coverage/
+showcase/.output/
+showcase/.vercel/
+showcase/.tanstack/
+showcase/.nitro/

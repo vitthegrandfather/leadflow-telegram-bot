@@ -9,6 +9,20 @@ Customers submit a structured brief in Telegram. Administrators receive a notifi
 Curated portfolio screenshots from an interactive workflow walkthrough are included in
 `portfolio/`. The Python bot remains the implementation artifact.
 
+## Interactive showcase
+
+The `showcase/` directory contains the browser walkthrough used in the portfolio. It mirrors
+the same lead lifecycle with fictional data and never connects to Telegram or a live CRM.
+
+```bash
+cd showcase
+npm ci
+npm run dev
+```
+
+The showcase is intentionally separate from the Python runtime: reviewers can explore the
+workflow without a bot token, while the production-minded implementation remains in `app/`.
+
 ## Features
 
 - Customer `/start` menu: submit a request, view personal requests, about
