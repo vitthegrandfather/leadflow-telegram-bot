@@ -2,6 +2,8 @@
 
 A Telegram lead-intake bot with a lightweight CRM workflow for a small service studio.
 
+**[Open the interactive demo](https://leadflow-showcase-seven.vercel.app)**
+
 **This is a personal portfolio demonstration project.** It is not paid client work, not a production SaaS, and not affiliated with a live agency. The code is intentionally complete enough to demonstrate production-minded structure, tests, and documentation.
 
 Customers submit a structured brief in Telegram. Administrators receive a notification, inspect the request, change status, add an internal note, view counts, and export leads to CSV.
